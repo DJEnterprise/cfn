@@ -3,7 +3,7 @@
 
   tasks:
     - name: Execute Cloudformation to create webserver stack
-      Cloudformation:
+      cloudformation:
         stack-name: 'WebserverStack'
         state: present
         region: ap-southeast-2
