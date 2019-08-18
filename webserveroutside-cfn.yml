@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+
+  task:
+    - name: Execute Cloudformation to create webserver stack
+      Cloudformation:
+        stack-name: 'WebserverStack'
+        state: present
+        region: ap-southeast-2
+        template-url: https://github.com/DJEnterprise/cfn/blob/master/Webserver.template
+        
+    
