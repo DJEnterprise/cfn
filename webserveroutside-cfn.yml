@@ -7,7 +7,7 @@
         stack_name: 'WebserverStack'
         state: present
         region: ap-southeast-2
-        template_url: Webserver.template
-        #template_url: https://github.com/DJEnterprise/cfn/blob/master/Webserver.template
+        #template_url: Webserver.template
+        template_url: https://dj-cfntemplates.s3-ap-southeast-2.amazonaws.com/Webserver.template
         
     
