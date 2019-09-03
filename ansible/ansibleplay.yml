@@ -1,5 +1,4 @@
 ---
-- name: Display Test Message
 - hosts: localhost
 
   tasks: 
