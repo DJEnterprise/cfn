@@ -4,3 +4,11 @@
   tasks: 
   - debug: 
       msg: Hello World! This is exciting!
+
+  tasks:
+  - shell: |
+      hostname
+      whoami
+    register: res
+  - debug:
+      var: res
