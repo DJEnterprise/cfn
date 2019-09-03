@@ -1,5 +1,6 @@
 ---
 - hosts: localhost
 
-- debug: 
+- name: Display Test Message
+  debug: 
     msg: Hello World! This is exciting!
