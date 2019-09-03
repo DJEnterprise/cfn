@@ -3,5 +3,6 @@
 
   task:
     - name: message
-      debug: "Hello World! This is exciting!"
+    - debug: 
+      msg: Hello World! This is exciting!
 ---
