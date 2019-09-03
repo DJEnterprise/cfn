@@ -13,4 +13,3 @@
   task:
     - name: message
       debug: "Stack Creation Complete"
----
