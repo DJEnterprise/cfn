@@ -1,7 +1,5 @@
 ---
 - hosts: localhost
 
-  task:
-    - name: message
-    - debug: 
-      msg: Hello World! This is exciting!
+- debug: 
+    msg: Hello World! This is exciting!
