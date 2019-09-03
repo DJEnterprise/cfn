@@ -10,3 +10,7 @@
         template-url: https://github.com/DJEnterprise/cfn/blob/master/Webserver.template
         
     
+  task:
+    - name: message
+      debug: "Stack Creation Complete"
+---
