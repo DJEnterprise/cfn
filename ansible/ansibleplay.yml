@@ -9,6 +9,12 @@
       hostname
       whoami
     register: res
-
-
+  - debug:
+      var: res
+  - shell: |
+      pwd
+      ls
+    register: response
+  - debug:
+      var: response
       
