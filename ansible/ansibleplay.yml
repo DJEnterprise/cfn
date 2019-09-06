@@ -1,7 +1,11 @@
 ---
 - hosts: localhost
+  
+  include_vars:
+          file: /vars/default_vars.yml
   vars:
   - name: "Dhan"
+   
   tasks: 
   - debug: 
       msg: Hello World! This is exciting!
