@@ -2,7 +2,7 @@
 - hosts: localhost
   
   vars_files: 
-    - vars/default_vars.yml
+    - vars/default_vars2.yml
 
   tasks: 
   - debug: 
