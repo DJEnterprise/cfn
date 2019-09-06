@@ -1,7 +1,8 @@
 ---
 - hosts: localhost
   
-  include_vars: vars/default_vars.yml
+  vars_files: 
+    - vars/default_vars.yml
 
   tasks: 
   - debug: 
