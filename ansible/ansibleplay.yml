@@ -1,7 +1,7 @@
 ---
 - hosts: localhost
   vars:
-  - name: ""
+  - name: "Dhan"
   tasks: 
   - debug: 
       msg: Hello World! This is exciting!
@@ -12,7 +12,7 @@
     register: res
   - debug:
       var: res
-  - shell: |
+  - shell: 
       pwd
       ls
     register: response
