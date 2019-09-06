@@ -1,6 +1,7 @@
 ---
 - hosts: localhost
-
+  vars:
+  - name: ""
   tasks: 
   - debug: 
       msg: Hello World! This is exciting!
@@ -17,4 +18,4 @@
     register: response
   - debug:
       var: response
-      
+  - debug: msg="Hello {{name}} from Ansible"
