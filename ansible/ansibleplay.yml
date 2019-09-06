@@ -1,7 +1,6 @@
 ---
 - hosts: localhost
   
-- name: Including Variable File
   include_vars: vars/default_vars.yml
 
   tasks: 
