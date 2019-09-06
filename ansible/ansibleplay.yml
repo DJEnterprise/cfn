@@ -19,4 +19,4 @@
   - debug:
       var: response
   - debug: msg="Hello {{name}} from Ansible"
-  - debug: msg="You are under the directory - {{response.stdout_lines}}"
+  - debug: msg="You are under the directory - {{response.stdout_lines[0]}}"
