@@ -34,7 +34,9 @@
   - debug:
       var: output
   - debug:
-      msg: "S3 Bucket Name - {{item.stdout_lines}}"
-      with_items: "{{output}}"
+      msg: "S3 Bucket Name - {{ item }}"
+      with_items: 
+        - cfnbucket
+        - calypsobucket
 
   - debug: msg="Execution Completed Succesfully"
