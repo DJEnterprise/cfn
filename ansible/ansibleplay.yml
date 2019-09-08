@@ -33,11 +33,12 @@
     register: output
   - debug:
       var: output
-  - debug:
-      msg: "S3 Bucket Name - {{ item }}"
-    with_items: 
-        - cfnbucket
-        - calypsobucket
+  #- debug:
+  #    msg: "S3 Bucket Name - {{ item }}"
+  #  with_items: 
+  #      - cfnbucket
+  #      - calypsobucket
+
   - debug:
       msg: "S3 Bucket Name - {{ item.stdout_lines }}"
     with_items: "{{output.stdout_lines}}"
