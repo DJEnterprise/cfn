@@ -29,7 +29,7 @@
 
   - command:
       aws s3 ls
-      echo "My Name is Dhan"
+      echo 'My Name is Dhan'
     register: output
   - debug:
       var: output
