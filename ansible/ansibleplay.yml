@@ -26,3 +26,11 @@
   - debug: msg="Hello {{name}} from Ansible"
   - debug: msg="Hello {{name2}} from Ansible"
   - debug: msg="You are under the directory - {{response.stdout_lines[0]}}"
+
+  tasks:
+  - command:
+      aws s3 ls
+    register: output
+  - debug:
+      var: output
+  - debug: msg="Execution Completed Succesfully"
