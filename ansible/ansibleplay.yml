@@ -40,6 +40,6 @@
   #      - calypsobucket
   - debug: msg="{{output.stdout_lines}}"
   - debug:
-      msg: "S3 Bucket Name - {{ item.stdout_lines }}"
+      msg: "S3 Bucket Name - {{ item }}"
     with_items: "{{output.stdout_lines}}"
   - debug: msg="Execution Completed Succesfully"
