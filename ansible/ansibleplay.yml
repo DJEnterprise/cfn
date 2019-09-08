@@ -38,7 +38,7 @@
   #  with_items: 
   #      - cfnbucket
   #      - calypsobucket
-
+  - debug: msg="{{output.stdout_lines}}"
   - debug:
       msg: "S3 Bucket Name - {{ item.stdout_lines }}"
     with_items: "{{output.stdout_lines}}"
