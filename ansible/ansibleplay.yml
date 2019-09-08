@@ -33,6 +33,6 @@
   - debug:
       var: output
   - debug:
-      msg: "S3 Bucket Name - {{output.stdout_lines}}"
-    until: output.stdout_lines|length
+      msg: "S3 Bucket Name - {{item.stdout_lines}}"
+    with_itmes: output.stdout_lines
   - debug: msg="Execution Completed Succesfully"
