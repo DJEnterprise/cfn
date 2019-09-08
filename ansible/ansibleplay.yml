@@ -35,7 +35,7 @@
       var: output
   - debug:
       msg: "S3 Bucket Name - {{ item }}"
-      with_items: 
+    with_items: 
         - cfnbucket
         - calypsobucket
 
