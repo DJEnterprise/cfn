@@ -27,7 +27,7 @@
   - debug: msg="Hello {{name2}} from Ansible"
   - debug: msg="You are under the directory - {{response.stdout_lines[0]}}"
 
-  - command:
+  - shell: |
       aws s3 ls
       echo 'My Name is Dhan'
     register: output
