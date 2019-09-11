@@ -43,7 +43,7 @@
       msg: "S3 Bucket Name - {{ item }}"
     with_items: "{{output.stdout_lines}}"
   - shell: |
-      aws ec2 describe-instances --region ap-southeast-2 --filters "Name=tag:Name,Values=Grid"
+      aws ec2 describe-instances --region ap-southeast-2 --filters "Name=tag:Name,Values=Grid" --query 'Reservations[].Instances[].PrivateIpAddress'
     register:  awslist
   
   - debug:
