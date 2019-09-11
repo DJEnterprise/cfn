@@ -51,4 +51,11 @@
   - debug:
       msg: "Grid Machines: {{ item }} "
     with_items: "{{awslist.stdout_lines}}"
+
+  - name: Add new instance to host group
+    add_host:
+      hostname: "{{ item }}"
+      groupname: launched
+    with_items: "{{ awslist.stdout_lines} }}"
+
   - debug: msg="Execution Completed Succesfully"
