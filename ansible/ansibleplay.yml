@@ -48,4 +48,7 @@
   
   - debug:
       var: awslist
+  - debug:
+      msg: "Grid Machines: {{ item }} {{item.Reservations.Instances.PrivateIpAddress}}"
+    with_items: "{{awslist.stdout_lines}}"
   - debug: msg="Execution Completed Succesfully"
