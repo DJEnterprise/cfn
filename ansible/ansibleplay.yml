@@ -44,7 +44,7 @@
     with_items: "{{output.stdout_lines}}"
   - shell: |
       aws ec2 describe-instances --region ap-southeast-2 --filters "Name=tag:Name,Values=Grid"
-      register:  awslist
+    register:  awslist
   - debug:
       ver: awslist
   - debug: msg="Execution Completed Succesfully"
