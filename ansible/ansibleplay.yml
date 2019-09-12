@@ -60,7 +60,7 @@
   
 - name: Executing commands in aws grid
 - hosts: localhost
-    launched
+    - launched
   tasks:
     - shell:
         whoami
