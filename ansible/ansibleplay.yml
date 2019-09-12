@@ -53,14 +53,13 @@
     with_items: "{{awslist.stdout_lines}}"
 
   - name: Add new instance to host group
-    add_host:
+  - add_host:
       hostname: "{{ item }}"
       groupname: launched
     with_items: "{{ awslist.stdout_lines }}"
   
 - name: Executing commands in aws grid
-- hosts: localhost
-    - launched
+- hosts: launched
   tasks:
     - shell:
         whoami
