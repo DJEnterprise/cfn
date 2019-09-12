@@ -59,7 +59,8 @@
     with_items: "{{ awslist.stdout_lines }}"
   
 - name: Executing commands in aws grid
-- hosts: launched
+- hosts: localhost
+    launched
   tasks:
     - shell:
         whoami
