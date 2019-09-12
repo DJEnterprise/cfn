@@ -58,7 +58,7 @@
       groupname: launched
     with_items: "{{ awslist.stdout_lines }}"
   
-- names: Executing commands in aws grid
+- name: Executing commands in aws grid
 - hosts: 
     launched
   tasks:
