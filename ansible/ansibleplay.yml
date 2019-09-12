@@ -53,7 +53,7 @@
     with_items: "{{awslist.stdout_lines}}"
 
   - name: Add new instance to host group
-  - add_host:
+    add_host:
       hostname: "{{ item }}"
       groupname: launched
     with_items: "{{ awslist.stdout_lines }}"
@@ -61,11 +61,11 @@
 - name: Executing commands in aws grid
 - hosts: launched
   tasks:
-    - shell:
-        whoami
-        hostname
-      register: fromaws
-    - debug:
-        var: fromaws
+  - shell:
+      whoami
+      hostname
+    register: fromaws
+  - debug:
+    var: fromaws
 
-    - debug: msg="Execution Completed Succesfully"
+  - debug: msg="Execution Completed Succesfully"
