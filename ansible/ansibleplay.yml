@@ -66,6 +66,6 @@
       hostname
     register: fromaws
   - debug:
-    var: fromaws
+      var: fromaws
 
   - debug: msg="Execution Completed Succesfully"
