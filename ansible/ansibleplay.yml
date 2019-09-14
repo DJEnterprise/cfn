@@ -62,9 +62,10 @@
 - name: Executing commands in aws grid
   hosts: launched
   tasks:
-  - shell:
+  - shell: |
       pwd
       hostname
+      whoami
     register: fromaws
   - debug:
       var: fromaws
