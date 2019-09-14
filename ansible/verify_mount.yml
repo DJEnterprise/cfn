@@ -7,11 +7,11 @@
 
   - tasks:
 
-    shell: |
+  - shell: |
       hostname
-      cd "{{item}}"
+      cd /usr/bin/
       pwd
-    with_items: "{{share_path}}"
+    #with_items: "{{share_path}}"
     register: output
 
   - debug:
