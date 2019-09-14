@@ -4,6 +4,7 @@
   vars:
     name2: "Suchi"
   
+  
   vars_files: 
     - vars/default_vars.yml
   
@@ -62,7 +63,7 @@
   hosts: launched
   tasks:
   - shell:
-      whoami
+      pwd
       hostname
     register: fromaws
   - debug:
