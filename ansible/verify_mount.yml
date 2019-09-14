@@ -13,8 +13,8 @@
       with_items: "{{share_path}}"
       register: output
 
-    - debug:
-        var: output
+    #- debug:
+        #var: output
 
     - debug:
         msg: "Paths Verified : {{item.stdout_lines}}"
@@ -22,4 +22,10 @@
       with_items: "{{output.results}}"
       loop_control:
         label: "{{ item.stdout_lines }}"
+        label: "{{ item.stderr_lines }}"
+
+    - debug:
+        msg: "Paths Having Issues: {{item.stderr_lines}}"
+      with_items: "{{output.results}}"
+      loop_control:
         label: "{{ item.stderr_lines }}"
