@@ -18,7 +18,8 @@
 
     - debug:
         msg: "Paths Verified : {{item.stdout_lines}}"
-        #msg: "Paths Having Issues: {{item.stderr_lines}}"
+        msg: "Paths Having Issues: {{item.stderr_lines}}"
       with_items: "{{output.results}}"
       loop_control:
         label: "{{ item.stdout_lines }}"
+        label: "{{ item.stderr_lines }}"
