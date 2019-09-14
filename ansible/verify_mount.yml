@@ -17,5 +17,5 @@
         var: output
 
     - debug:
-        msg: {{item.results.stdout_lines}}
-      with_items: {{output}}
+        msg: "{{item.results.stdout_lines}}"
+      with_items: "{{output}}"
