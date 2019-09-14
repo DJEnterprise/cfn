@@ -31,6 +31,6 @@
     - debug: 
         msg: "{{item}}"
       with_items: 
-      - "{{output.results.stdout_lines}}"
+      - "{{output.stdout_lines}}"
       loop_control:
         label: "{{ item.stdout_lines }}"
