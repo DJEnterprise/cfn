@@ -6,8 +6,8 @@
       - vars/mount_list.yml
 
   - tasks:
-  
-  - shell: |
+
+    shell: |
       hostname
       cd "{{item}}"
       pwd
