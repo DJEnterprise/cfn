@@ -14,4 +14,4 @@
     register: output
 
   - debug:
-        msg: {{output.stdout_lines}}
+      msg: {{output.stdout_lines}}
