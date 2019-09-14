@@ -21,4 +21,4 @@
         #msg: "Paths Having Issues: {{item.stderr_lines}}"
       with_items: "{{output.results}}"
       loop_control:
-        label: "{{ item.stdout_lines} }}"
+        label: "{{ item.stdout_lines }}"
