@@ -5,14 +5,13 @@
     vars_files:
       - vars/mount_list.yml
 
-  - tasks:
+    tasks:
+    - shell: |
+        hostname
+        cd /usr/bin/
+        pwd
+      #with_items: "{{share_path}}"
+      register: output
 
-  - shell: |
-      hostname
-      cd /usr/bin/
-      pwd
-    #with_items: "{{share_path}}"
-    register: output
-
-  - debug:
-      var: output
+    - debug:
+        var: output
