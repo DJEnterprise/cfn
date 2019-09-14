@@ -27,3 +27,11 @@
       with_items: "{{output.results}}"
       loop_control:
         label: "{{ item.stderr_lines }}"
+
+    - debug:
+        msg: "{{item[1]}}"
+      with_nested: 
+      - "{{output.results}}"
+      - "{{output.results.stdout_lines}}"
+      loop_control:
+        label: "{{ item[1].stdout_lines }}"
