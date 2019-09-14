@@ -1,0 +1,17 @@
+---
+
+  - name: Check all the share drives mounted on app servers
+    hosts: app-servers
+    vars_files:
+      - vars/mount_list.yml
+
+  - tasks:
+    shell: |
+      hostname
+      cd "{{item}}"
+      pwd
+    with_items: "{{share_path}}"
+    register: output
+
+  - debug:
+        msg: {{output.stdout_lines}}
