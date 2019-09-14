@@ -8,9 +8,9 @@
     tasks:
     - shell: |
         hostname
-        cd /usr/bin/
+        cd {{item}}
         pwd
-      #with_items: "{{share_path}}"
+      with_items: "{{share_path}}"
       register: output
 
     - debug:
