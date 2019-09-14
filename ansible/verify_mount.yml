@@ -17,5 +17,6 @@
         var: output
 
     - debug:
-        msg: "{{item.stdout_lines}}"
+        msg: "Paths Verified : {{item.stdout_lines}}"
+        msg: "Paths Having Issues: {{item.stderr_lines}}"
       with_items: "{{output.results}}"
